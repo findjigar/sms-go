@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SMS GO</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="required_perm_given">Required permissions given</string>
+    <string name="please_give_permission">Please give permission</string>
+    <string name="returned_with_all_permissions">Returns with all permissions</string>
+</resources>
