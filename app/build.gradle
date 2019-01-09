@@ -3,6 +3,15 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+// Creates a variable called twilioPropertiesFile, and initializes it to the twilio.properties file.
+def twilioPropertiesFile = rootProject.file("twilio.properties")
+
+// Initializes a new Properties() object called twilioProperties.
+def twilioProperties = new Properties()
+
+// Loads the twilio.properties file into the twilioProperties object.
+twilioProperties.load(new FileInputStream(twilioPropertiesFile))
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -12,6 +21,11 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "TWILIO_ACCOUNT_SID", twilioProperties["ACCOUNT_SID"])
+        buildConfigField("String", "TWILIO_AUTH_TOKEN", twilioProperties["AUTH_TOKEN"])
+        buildConfigField("String", "TWILIO_BASE_URL", twilioProperties["BASE_URL"])
+        buildConfigField("String", "TWILIO_TO_NUMBER", twilioProperties["TO_NUMBER"])
+        buildConfigField("String", "TWILIO_FROM_NUMBER", twilioProperties["FROM_NUMBER"])
     }
     buildTypes {
         release {
@@ -29,6 +43,7 @@ dependencies {
     implementation Libs.appCompat
     implementation Libs.coreKtx
     implementation Libs.constraintLayout
+    implementation Libs.okhttp
     testImplementation TestLibs.junit
     androidTestImplementation TestLibs.espresso
 }

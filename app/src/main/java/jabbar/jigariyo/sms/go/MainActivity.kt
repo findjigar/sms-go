@@ -14,7 +14,6 @@ import pub.devrel.easypermissions.EasyPermissions
 class MainActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks, EasyPermissions.RationaleCallbacks {
 
     companion object {
-        private const val TAG = "SMS GO"
         private const val REQUEST_CODE = 767
     }
 

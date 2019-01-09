@@ -5,6 +5,7 @@ object Versions {
     const val coreKtx = "1.1.0-alpha03"
     const val constraintlayout = "1.1.3"
     const val kotlin = "1.3.11"
+    const val okhttp = "3.12.1"
 }
 
 object Libs {
@@ -15,6 +16,8 @@ object Libs {
     val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
     val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+
 }
 
 object TestLibs {

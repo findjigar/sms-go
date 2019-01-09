@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <!-- Needed to check on which phone number got the SMS (in case of dual SIM) -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
             android:allowBackup="false"
