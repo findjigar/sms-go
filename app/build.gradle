@@ -18,8 +18,8 @@ android {
         applicationId "jabbar.jigariyo.sms.go"
         minSdkVersion 23
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "TWILIO_ACCOUNT_SID", twilioProperties["ACCOUNT_SID"])
         buildConfigField("String", "TWILIO_AUTH_TOKEN", twilioProperties["AUTH_TOKEN"])
@@ -44,6 +44,9 @@ dependencies {
     implementation Libs.coreKtx
     implementation Libs.constraintLayout
     implementation Libs.okhttp
+    implementation Libs.firebaseCore
     testImplementation TestLibs.junit
     androidTestImplementation TestLibs.espresso
 }
+
+apply plugin: 'com.google.gms.google-services'
