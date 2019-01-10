@@ -6,6 +6,7 @@ object Versions {
     const val constraintlayout = "1.1.3"
     const val kotlin = "1.3.11"
     const val okhttp = "3.12.1"
+    const val firebaseCore = "16.0.6"
 }
 
 object Libs {
@@ -17,6 +18,7 @@ object Libs {
     val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    val firebaseCore = "com.google.firebase:firebase-core:${Versions.firebaseCore}"
 
 }
 

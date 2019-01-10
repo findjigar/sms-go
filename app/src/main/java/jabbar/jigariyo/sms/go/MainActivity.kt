@@ -3,9 +3,9 @@ package jabbar.jigariyo.sms.go
 import android.Manifest
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
+import jabbar.jigariyo.sms.go.Utils.log
 import kotlinx.android.synthetic.main.activity_main.*
 import pub.devrel.easypermissions.AfterPermissionGranted
 import pub.devrel.easypermissions.AppSettingsDialog
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks, E
     }
 
     override fun onPermissionsDenied(requestCode: Int, perms: MutableList<String>) {
-        Log.d(TAG, "onPermissionsDenied:$requestCode:$perms.size")
+        log("onPermissionsDenied:$requestCode:$perms.size")
 
         // (Optional) Check whether the user denied any permissions and checked "NEVER ASK AGAIN."
         // This will display a dialog directing them to enable the permission in app settings.
@@ -63,15 +63,15 @@ class MainActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks, E
     }
 
     override fun onPermissionsGranted(requestCode: Int, perms: MutableList<String>) {
-        Log.d(TAG, "onPermissionsGranted:$requestCode:$perms.size")
+        log("onPermissionsGranted:$requestCode:$perms.size")
     }
 
     override fun onRationaleDenied(requestCode: Int) {
-        Log.d(TAG, "onRationaleDenied:$requestCode")
+        log("onRationaleDenied:$requestCode")
     }
 
     override fun onRationaleAccepted(requestCode: Int) {
-        Log.d(TAG, "onRationaleAccepted:$requestCode")
+        log("onRationaleAccepted:$requestCode")
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
